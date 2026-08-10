@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BookVerse | Sua próxima leitura</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav">
+
+            <a href="#" class="logo">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Book<span>Verse</span></span>
+            </a>
+
+            <nav class="menu">
+                <a href="#inicio">Início</a>
+                <a href="#livros">Livros</a>
+                <a href="#categorias">Categorias</a>
+                <a href="#ofertas">Ofertas</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="icon-btn search-toggle" aria-label="Pesquisar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button class="icon-btn cart-btn" aria-label="Carrinho">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </button>
+
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+        </div>
+
+        <div class="search-box">
+            <div class="container">
+                <div class="search-input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Busque por título, autor ou categoria...">
+                    <button id="closeSearch">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero" id="inicio">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="hero-label">
+                        <i class="fa-solid fa-sparkles"></i>
+                        Descubra sua próxima história
+                    </span>
+
+                    <h1>
+                        Livros que
+                        <span>transformam</span>
+                        momentos.
+                    </h1>
+
+                    <p>
+                        Encontre histórias incríveis, autores inspiradores
+                        e livros que combinam com você.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#livros" class="btn btn-primary">
+                            Explorar livros
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="#categorias" class="btn btn-secondary">
+                            Ver categorias
+                        </a>
+                    </div>
+
+                    <div class="hero-info">
+                        <div>
+                            <strong>10k+</strong>
+                            <span>Livros disponíveis</span>
+                        </div>
+
+                        <div>
+                            <strong>4.9</strong>
+                            <span>Avaliação média</span>
+                        </div>
+
+                        <div>
+                            <strong>24h</strong>
+                            <span>Entrega expressa</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="hero-books">
+
+                    <div class="book-decoration decoration-one"></div>
+                    <div class="book-decoration decoration-two"></div>
+
+                    <div class="featured-book">
+                        <div class="book-cover">
+                            <div class="cover-content">
+                                <small>UMA NOVA</small>
+                                <h3>Jornada</h3>
+                                <p>começa aqui</p>
+                                <div class="cover-line"></div>
+                                <span>BOOKVERSE EDITION</span>
+                            </div>
+                        </div>
+
+                        <div class="book-shadow"></div>
+                    </div>
+
+                    <div class="floating-card">
+                        <i class="fa-solid fa-star"></i>
+                        <div>
+                            <strong>4.9/5</strong>
+                            <span>Mais bem avaliado</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CATEGORIAS -->
+        <section class="categories section" id="categorias">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-label">Explore</span>
+                        <h2>Encontre seu gênero</h2>
+                    </div>
+
+                    <a href="#livros" class="view-all">
+                        Ver todos
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="category-grid">
+
+                    <button class="category-card" data-category="Ficção">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-feather-pointed"></i>
+                        </div>
+                        <h3>Ficção</h3>
+                        <span>2.450 livros</span>
+                    </button>
+
+                    <button class="category-card" data-category="Romance">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h3>Romance</h3>
+                        <span>1.820 livros</span>
+                    </button>
+
+                    <button class="category-card" data-category="Tecnologia">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>Tecnologia</h3>
+                        <span>960 livros</span>
+                    </button>
+
+                    <button class="category-card" data-category="Fantasia">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3>Fantasia</h3>
+                        <span>1.340 livros</span>
+                    </button>
+
+                    <button class="category-card" data-category="Negócios">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3>Negócios</h3>
+                        <span>780 livros</span>
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- LIVROS -->
+        <section class="books section" id="livros">
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-label">Nossa seleção</span>
+                        <h2>Livros em destaque</h2>
+                    </div>
+
+                    <div class="book-filters">
+                        <button class="filter active" data-filter="Todos">Todos</button>
+                        <button class="filter" data-filter="Ficção">Ficção</button>
+                        <button class="filter" data-filter="Romance">Romance</button>
+                        <button class="filter" data-filter="Tecnologia">Tecnologia</button>
+                    </div>
+
+                </div>
+
+                <div class="books-grid" id="booksGrid">
+
+                    <!-- BOOK 1 -->
+                    <article class="book-card" data-category="Ficção" data-title="O Código da Noite"
+                        data-author="Lucas Martins">
+
+                        <div class="book-image cover-purple">
+
+                            <span class="book-tag">Bestseller</span>
+
+                            <button class="favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <div class="fake-cover">
+                                <small>O</small>
+                                <h3>Código<br>da Noite</h3>
+                                <div class="fake-line"></div>
+                                <span>LUCAS MARTINS</span>
+                            </div>
+
+                        </div>
+
+                        <div class="book-info">
+
+                            <span class="book-category">Ficção</span>
+
+                            <h3>O Código da Noite</h3>
+
+                            <p>Lucas Martins</p>
+
+                            <div class="rating">
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span>4.9</span>
+                            </div>
+
+                            <div class="book-bottom">
+                                <strong>R$ 49,90</strong>
+
+                                <button class="add-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>
+
+
+                    <!-- BOOK 2 -->
+                    <article class="book-card" data-category="Romance" data-title="Depois do Inverno"
+                        data-author="Clara Mendes">
+
+                        <div class="book-image cover-red">
+
+                            <span class="book-tag">Novo</span>
+
+                            <button class="favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <div class="fake-cover">
+                                <small>DEPOIS DO</small>
+                                <h3>Inverno</h3>
+                                <div class="fake-line"></div>
+                                <span>CLARA MENDES</span>
+                            </div>
+
+                        </div>
+
+                        <div class="book-info">
+
+                            <span class="book-category">Romance</span>
+
+                            <h3>Depois do Inverno</h3>
+
+                            <p>Clara Mendes</p>
+
+                            <div class="rating">
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <span>4.7</span>
+                            </div>
+
+                            <div class="book-bottom">
+                                <strong>R$ 39,90</strong>
+
+                                <button class="add-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>
+
+
+                    <!-- BOOK 3 -->
+                    <article class="book-card" data-category="Tecnologia" data-title="Código para Humanos"
+                        data-author="Daniel Rocha">
+
+                        <div class="book-image cover-blue">
+
+                            <span class="book-tag">Popular</span>
+
+                            <button class="favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <div class="fake-cover">
+                                <small>CODE</small>
+                                <h3>para<br>Humanos</h3>
+                                <div class="fake-line"></div>
+                                <span>DANIEL ROCHA</span>
+                            </div>
+
+                        </div>
+
+                        <div class="book-info">
+
+                            <span class="book-category">Tecnologia</span>
+
+                            <h3>Código para Humanos</h3>
+
+                            <p>Daniel Rocha</p>
+
+                            <div class="rating">
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span>5.0</span>
+                            </div>
+
+                            <div class="book-bottom">
+                                <strong>R$ 59,90</strong>
+
+                                <button class="add-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>
+
+
+                    <!-- BOOK 4 -->
+                    <article class="book-card" data-category="Ficção" data-title="A Última Estação"
+                        data-author="Marina Alves">
+
+                        <div class="book-image cover-green">
+
+                            <span class="book-tag">-20%</span>
+
+                            <button class="favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <div class="fake-cover">
+                                <small>A ÚLTIMA</small>
+                                <h3>Estação</h3>
+                                <div class="fake-line"></div>
+                                <span>MARINA ALVES</span>
+                            </div>
+
+                        </div>
+
+                        <div class="book-info">
+
+                            <span class="book-category">Ficção</span>
+
+                            <h3>A Última Estação</h3>
+
+                            <p>Marina Alves</p>
+
+                            <div class="rating">
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <span>4.6</span>
+                            </div>
+
+                            <div class="book-bottom">
+                                <strong>R$ 44,90</strong>
+
+                                <button class="add-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- BANNER -->
+        <section class="offer section" id="ofertas">
+
+            <div class="container">
+
+                <div class="offer-content">
+
+                    <div class="offer-text">
+
+                        <span class="section-label">Oferta especial</span>
+
+                        <h2>
+                            Sua próxima leitura
+                            começa com <span>20% OFF.</span>
+                        </h2>
+
+                        <p>
+                            Aproveite nossa seleção especial de livros
+                            e receba frete grátis em compras acima de R$ 100.
+                        </p>
+
+                        <a href="#livros" class="btn btn-primary">
+                            Aproveitar oferta
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="offer-visual">
+                        <div class="mini-book book-a"></div>
+                        <div class="mini-book book-b"></div>
+                        <div class="mini-book book-c"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BENEFÍCIOS -->
+        <section class="benefits section">
+
+            <div class="container">
+
+                <div class="benefits-grid">
+
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+
+                        <div>
+                            <h3>Entrega rápida</h3>
+                            <p>Receba seus livros com segurança.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div>
+                            <h3>Compra segura</h3>
+                            <p>Seus dados protegidos em todas as compras.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+
+                        <div>
+                            <h3>Suporte especializado</h3>
+                            <p>Estamos aqui para ajudar você.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <a href="#" class="logo">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Book<span>Verse</span></span>
+                    </a>
+
+                    <p>
+                        Uma experiência diferente para quem
+                        acredita no poder das histórias.
+                    </p>
+
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="footer-column">
+                    <h4>Explorar</h4>
+                    <a href="#livros">Livros</a>
+                    <a href="#categorias">Categorias</a>
+                    <a href="#ofertas">Ofertas</a>
+                    <a href="#">Autores</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Atendimento</h4>
+                    <a href="#">Central de ajuda</a>
+                    <a href="#">Entrega</a>
+                    <a href="#">Trocas e devoluções</a>
+                    <a href="#">Contato</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Receba novidades e ofertas exclusivas.</p>
+
+                    <form class="newsletter">
+                        <input type="email" placeholder="Seu melhor e-mail" required>
+                        <button type="submit">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 BookVerse. Todos os direitos reservados.</span>
+
+                <div>
+                    <a href="#">Privacidade</a>
+                    <a href="#">Termos</a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- CART SIDEBAR -->
+    <div class="overlay"></div>
+
+    <aside class="cart">
+
+        <div class="cart-header">
+            <div>
+                <span class="section-label">Sua seleção</span>
+                <h2>Meu carrinho</h2>
+            </div>
+
+            <button class="close-cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+
+            <div class="empty-cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <h3>Seu carrinho está vazio</h3>
+                <p>Adicione livros para começar sua compra.</p>
+            </div>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cartTotal">R$ 0,00</strong>
+            </div>
+
+            <button class="checkout">
+                Finalizar compra
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-check"></i>
+        <span>Livro adicionado ao carrinho!</span>
+    </div>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
